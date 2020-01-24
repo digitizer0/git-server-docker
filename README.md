@@ -1,5 +1,5 @@
 # git-server-docker
-A lightweight Git Server Docker image built with Alpine Linux. Available on [GitHub](https://github.com/jkarlosb/git-server-docker) and [Docker Hub](https://hub.docker.com/r/jkarlos/git-server-docker/)
+A lightweight Git Server Docker image built with Alpine Linux. Available on [GitHub](https://github.com/mfugate1/git-server-docker) and [Docker Hub](https://hub.docker.com/r/mfugate/git-server-docker/)
 
 !["image git server docker" "git server docker"](https://raw.githubusercontent.com/jkarlosb/git-server-docker/master/git-server-docker.jpg)
 
@@ -28,12 +28,10 @@ How to check that container works (you must to have a key):
 
 How to create a new repo:
 
-	$ cd myrepo
-	$ git init --shared=true
-	$ git add .
-	$ git commit -m "my first commit"
-	$ cd ..
-	$ git clone --bare myrepo myrepo.git
+	$ cd repo
+    $ mkdir myrepo.git
+    $ cd myrepo.git
+	$ git init --shared=true --bare
 
 How to upload a repo:
 
