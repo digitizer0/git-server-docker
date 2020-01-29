@@ -11,11 +11,11 @@ RUN ssh-keygen -A
 # SSH autorun
 # RUN rc-update add sshd
 
-WORKDIR /git-server/
+WORKDIR /srv
 
 # -D flag avoids password generation
 # -s flag changes user's shell
-RUN mkdir /git-server/keys \
+RUN mkdir /srv/keys \
   && adduser -D -s /usr/bin/git-shell git \
   && echo git:12345 | chpasswd \
   && mkdir /home/git/.ssh
