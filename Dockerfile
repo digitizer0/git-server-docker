@@ -3,7 +3,8 @@ FROM alpine:3.11.3
 RUN apk add --no-cache \
   openssh \
   git \
-  bash
+  bash \
+  python3
 
 # Key generation on the server
 RUN ssh-keygen -A
